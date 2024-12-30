@@ -1,3 +1,3 @@
-  <div class="simple-footer">
-      Copyright &copy; simpadu-c030322999 2023
+  <div class="simple-footer" style="color: white";>
+      Copyright &copy; Dispersip Kalsel 2024
   </div>

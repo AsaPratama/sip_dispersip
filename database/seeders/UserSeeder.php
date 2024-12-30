@@ -17,10 +17,10 @@ class UserSeeder extends Seeder
         User::factory(15)->create();
 
         User::create([
-            'name' => 'arifin',
-            'email' => 'arifin@gmail.com',
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('88888888'),
+            'password' => Hash::make('1234'),
         ]);
     }
 }
