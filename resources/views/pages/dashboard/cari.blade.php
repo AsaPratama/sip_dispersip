@@ -138,11 +138,11 @@
                     <div class="row mb-3">
                         <div class="col">
                             <h6 class="card-subtitle mb-2 text-body-secondary">Letak rak</h6>
-                            <h5 class="card-title">{{ $koran->rak->nama_rak }}</h5>
+                            <h5 class="card-title">{{ $koran->rak?->nama_rak ?? 'Tidak ada rak' }}</h5>
                         </div>
                         <div class="col">
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Jumlah buku tersedia</h6>
-                            <h5 class="card-title">{{ $koran->jumlah_buku}}</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Jumlah eksemplar tersedia</h6>
+                            <h5 class="card-title">{{ $koran->jumlah_eksemplar}}</h5>
                         </div>
                     </div>
 

@@ -20,8 +20,21 @@ return new class extends Migration
             $table->unsignedSmallInteger('jumlah_halaman');
             $table->char('kondisi');
             $table->integer('rak_id');
-            $table->unsignedSmallInteger('jumlah_buku');
+
+            // edit nama field 
+            $table->unsignedSmallInteger('jumlah_eksemplar');
+            //---
+
             $table->char('jenis_koleksi');
+            
+            // field baru
+            $table->string('tempat_terbit');
+            $table->integer('dimensi_p');
+            $table->integer('dimensi_l');
+            $table->integer('dimensi_t');
+            $table->string('keterangan');
+            //---
+
             $table->string('pdf_path')->nullable();
             $table->string('cover_path')->nullable();
             $table->timestamps();

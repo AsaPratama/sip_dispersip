@@ -57,7 +57,7 @@
         }
 
         .input-group-text {
-            width: 140px;
+            width: 200px;
             text-align: left;
         }
     </style>
@@ -95,7 +95,7 @@
                             <img src="{{ asset( $koran->cover_path) }}" class="card-img-top" alt="" style="width: 100%; height: 400px; object-fit: cover;">
                         @else
                             <img src="{{ url('img/not found.png')}}" class="card-img-top" alt="" style="width: 100%; height: 400px; object-fit: cover;">
-                        @endif     
+                        @endif       
                     <div class="card-body">
                         <h5 class="card-title py-2">{{ $koran->judul }}</h5>
                         @if ($koran->pdf_path)
@@ -138,18 +138,48 @@
          
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Letak rak</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->rak->nama_rak }}" readonly>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        aria-label="Sizing example input" 
+                        aria-describedby="inputGroup-sizing-default" 
+                        value="{{ $koran->rak?->nama_rak ?? 'Tidak ada rak' }}" 
+                        readonly
+                    >
                 </div>
+
           
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Jumlah buku</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->jumlah_buku }}" readonly>
+                    <span class="input-group-text" id="inputGroup-sizing-default">Jumlah eksemplar</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->jumlah_eksemplar }}" readonly>
                 </div>
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Jenis Koleksi</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->jenis_koleksi }}" readonly>
+                    <span class="input-group-text" id="inputGroup-sizing-default">Tempat terbit</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->tempat_terbit }}" readonly>
                 </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Dimensi panjang (cm)</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->dimensi_p }}" readonly>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Dimensi lebar (cm)</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->dimensi_l }}" readonly>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Dimensi tinggi (cm)</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->dimensi_t }}" readonly>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Keterangan</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{ $koran->keterangan }}" readonly>
+                </div>
+
+                
         </div>
     </div>
     

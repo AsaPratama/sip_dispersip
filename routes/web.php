@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\KoranController;
 use App\Http\Controllers\KoleksiController;
 use App\Http\Controllers\RakController;
+use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -48,3 +49,7 @@ Route::resource('user', UserController::class);
 
 // Route rak
 Route::resource('rak', RakController::class);
+
+
+// Route PDF
+Route::resource('PrintPdf', PdfController::class);

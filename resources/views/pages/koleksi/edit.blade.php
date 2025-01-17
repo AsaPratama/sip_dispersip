@@ -73,21 +73,21 @@
 
                                     <div class="form-group">
                                         <label for="kondisi">Rak</label>
-                                        <select id="" name="rak_id" class="form-control"> 
-                                            <option value="{{ $korans -> rak_id}}">
-                                                {{$korans -> rak -> nama_rak}}
+                                        <select id="rak_id" name="rak_id" class="form-control"> 
+                                            <option value="{{ $korans->rak_id }}">
+                                                {{ $korans->rak?->nama_rak ?? 'Daftarkan nanti' }}
                                             </option>    
                                             @foreach($raks as $rak) 
-                                            <option value="{{ $rak -> id}}">
-                                                {{$rak -> nama_rak}}
+                                            <option value="{{ $rak->id }}">
+                                                {{ $rak->nama_rak }}
                                             </option>  
                                             @endforeach                                         
                                         </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="jumlah_buku">Jumlah Buku</label>
-                                        <input type="number" min="1" max="1000" class="form-control" id="" name="jumlah_buku" value="{{$korans->jumlah_buku}}" required required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                        <label for="jumlah_eksemplar">Jumlah Eksemplar</label>
+                                        <input type="number" min="1" max="1000" class="form-control" id="" name="jumlah_eksemplar" value="{{$korans->jumlah_eksemplar}}" required required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                                     </div>
                                     
                                     <div class="form-group">
@@ -98,7 +98,34 @@
                                             <option value="Majalah">Majalah</option>
                                             <option value="Buku">Buku</option>
                                             <option value="Koran">Koran</option>
+                                            <option value="Skripsi">Skripsi</option>
+                                            <option value="Karya ilmiah">Karya ilmiah</option>
                                         </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="tempat_terbit">Tempat Terbit</label>
+                                        <input type="text" class="form-control" id="" name="tempat_terbit" value="{{$korans->tempat_terbit}}" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dimensi_p">Dimensi Panjang (cm)</label>
+                                        <input type="number" class="form-control" id="" name="dimensi_p" value="{{$korans->dimensi_p}}" placeholer ="hanya masukan nilai tanpa satuan" required >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dimensi_l">Dimensi Lebar (cm)</label>
+                                        <input type="number" class="form-control" id="" name="dimensi_l" value="{{$korans->dimensi_l}}" placeholer ="hanya masukan nilai tanpa satuan" required >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dimensi_t">Dimensi Tinggi (cm)</label>
+                                        <input type="number" class="form-control" id="" name="dimensi_t" value="{{$korans->dimensi_t}}" placeholer ="hanya masukan nilai tanpa satuan" required >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="keteragan">Keterangan</label>
+                                        <input type="text" class="form-control" id="" name="keterangan" value="{{$korans->keterangan}}" required >
                                     </div>
 
                                     <div class="form-group">

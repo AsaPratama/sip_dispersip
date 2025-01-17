@@ -9,9 +9,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call(KoranSeeder::class);
+       // $this->call(KoranSeeder::class);
         $this->call(UserSeeder::class);
-        $this->call(RakSeeder::class);
+       // $this->call(RakSeeder::class);
 
     }
 }
